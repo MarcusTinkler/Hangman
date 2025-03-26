@@ -5,7 +5,7 @@ ord_lista = ["blixt", "fängelse", "jordglob", "kaktus", "mysterium", "ostron", 
 
 
 
-poäng = 0                               # Antal gånger man gissar rätt irad
+poäng = 0                          # Antal gånger man gissar rätt irad
 
 print("\nVälkommen till HÄNGAGUBBE!")
 
@@ -14,6 +14,7 @@ while True:
 
     display = ["_" for _ in mitt_ord]       # Skapar lista med "_"
 
+     
     antal_liv = 8                           # Antal gånger man kan gissa
 
     while antal_liv > 0 and "_" in display:
@@ -51,14 +52,18 @@ while True:
         print("\nOrdet var: " + mitt_ord.capitalize())
         print("\nDu blev tyvärr hängd x_x")
         print("\nSlutgiltiga poäng: ", poäng)
+        
 
 
         # Frågar om spelaren vill spela igen
 
         spela_igen = input("\nVill du spela igen? (Ja/Nej): ").lower()
-
+        
         if spela_igen != "ja":
 
             print("\nTack för att du spelade! Din slutpoäng blev:", poäng)
 
             break
+        else:
+            poäng = 0 
+            
